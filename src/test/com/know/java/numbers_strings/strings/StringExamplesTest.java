@@ -6,6 +6,7 @@ import org.mockito.Mock;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class StringExamplesTest {
 
@@ -61,5 +62,11 @@ class StringExamplesTest {
         int age = 18;
         String mixString = "I am " + age + "yo";
         assertInstanceOf(String.class, mixString);
+    }
+
+    @Test
+    void createFormatString() {
+        String fs = sut.createFormatString(7f, 5, "Java");
+        System.out.println(fs);
     }
 }

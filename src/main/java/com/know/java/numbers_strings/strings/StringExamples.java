@@ -37,4 +37,13 @@ public class StringExamples {
     public String concatStrings(String s1, String s2) {
         return s1.concat(s2);
     }
+
+    public String createFormatString(float floatVar, int intVar, String stringVar) {
+        return String.format("The value of the float " +
+                        "variable is %f, while " +
+                        "the value of the " +
+                        "integer variable is %d, " +
+                        " and the string is %s",
+                floatVar, intVar, stringVar);
+    }
 }

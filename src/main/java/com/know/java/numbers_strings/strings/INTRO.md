@@ -26,5 +26,46 @@ s1.concat(s2);
 ```
 
 Strings are most commonly concanated with `+` operator. You can also concat string with mixed data types. Such a
-concatenation can be a mixture of any objects. For each object that is not a String, its `toString()` method is called to
+concatenation can be a mixture of any objects. For each object that is not a String, its `toString()` method is called
+to
 convert it to a String.
+
+From Java SE 15, you can write two-dimensional string literals:
+
+```java
+String html = """
+        <html>
+            <body>
+                <p>Hello, world!</p>
+            </body>
+        </html>
+        """;
+```
+
+## Creating Format Strings
+
+The **String** class includes `format()` method to print output with formatted strings, which returns a string object
+rather than a [PrintStream](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/PrintStream.html)
+object.
+
+Using String's static `format()` method allows you to create a formatted string that you can reuse, as apposed to a
+one-time print statement. For example, instead of
+```java
+System.out.printf("The value of the float " +
+                  "variable is %f, while " +
+                  "the value of the " + 
+                  "integer variable is %d, " +
+                  "and the string is %s", 
+                  floatVar, intVar, stringVar);
+```
+you can write
+```java
+String fs;
+fs = String.format("The value of the float " +
+                   "variable is %f, while " +
+                   "the value of the " + 
+                   "integer variable is %d, " +
+                   " and the string is %s",
+                   floatVar, intVar, stringVar);
+IO.println(fs);
+```
