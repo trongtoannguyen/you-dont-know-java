@@ -1,4 +1,4 @@
-package example.java.util.concurrent.atomic;
+package com.know.java.util.concurrent.atomic;
 
 
 public class NonThreadSafeBankAccount {

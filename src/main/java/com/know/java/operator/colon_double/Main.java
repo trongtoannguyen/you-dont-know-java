@@ -1,4 +1,4 @@
-package example.java.operator.colon_double;
+package com.know.java.operator.colon_double;
 
 import java.util.ArrayList;
 import java.util.List;

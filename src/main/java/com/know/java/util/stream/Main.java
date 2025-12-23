@@ -1,4 +1,4 @@
-package example.java.util.stream;
+package com.know.java.util.stream;
 
 import java.util.Arrays;
 import java.util.List;

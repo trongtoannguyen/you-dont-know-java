@@ -1,4 +1,4 @@
-package example.java.util.UUID;
+package com.know.java.util.UUID;
 
 import java.util.Objects;
 import java.util.Scanner;
