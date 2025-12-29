@@ -132,4 +132,22 @@ or simply:
 ```java
 String vString = String.valueOf(v);
 ```
+
 In the last approach, the JVM internally calls the `toString()` method of the corresponding wrapper class.
+
+## Getting Characters and Substrings by Index
+
+The _String_ class has a lot of useful methods to complete a task, such as substrings, string case changing, finding
+character, ...
+
+For example, `charAt` accessor method, return character at particular index.
+
+```java
+String aString = "Hello world!";
+
+// return character at index 4, in this case it return 'o'
+char aChar = aString.charAt(4);
+```
+
+There are two versions of `substring` method to get more than one consecutive character from a string
+`substring(int beginIndex)` and `substring(int beginIndex, int endIndex)`

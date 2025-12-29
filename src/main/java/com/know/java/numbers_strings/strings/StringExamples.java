@@ -73,4 +73,26 @@ public class StringExamples {
         // Java implicitly calls toString() method
         return String.valueOf(number);
     }
+
+    /**
+     * Get character at index in String
+     */
+    public char getCharAtFromString(String s, int index) {
+        return s.charAt(index);
+    }
+
+    /**
+     * Extracts a substring from the given string starting from a beginning (inclusive)
+     * to ending index (exclusive).
+     */
+    public String subStringFromToIndex(String s, int beg, int end) {
+        return s.substring(beg, end);
+    }
+
+    /**
+     * Overloaded substring method
+     */
+    public String substringFromString(String s, int from) {
+        return subStringFromToIndex(s, from, s.length());
+    }
 }

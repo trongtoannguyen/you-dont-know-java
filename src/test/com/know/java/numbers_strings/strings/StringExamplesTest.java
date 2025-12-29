@@ -100,4 +100,24 @@ class StringExamplesTest {
         assertInstanceOf(String.class, result);
         assertEquals("68.3", result);
     }
+
+    @Test
+    void getCharAtFromString() {
+        String s = "Java Developer";
+        int index = 2;
+        char result = sut.getCharAtFromString(s, index);
+        assertEquals('v', result);
+        assertInstanceOf(Character.class, result);
+    }
+
+    @Test
+    void substringFromString() {
+        String aPalindrome = "Niagara. O roar again!";
+        String result = sut.substringFromString(aPalindrome, aPalindrome.length() - 1);
+        assertEquals("!", result);
+
+        int dotIndex = aPalindrome.indexOf(".");
+        result = sut.subStringFromToIndex(aPalindrome, 0, dotIndex);
+        assertEquals("Niagara", result);
+    }
 }
