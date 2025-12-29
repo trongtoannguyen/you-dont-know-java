@@ -58,4 +58,19 @@ public class StringExamples {
     public float parseFloatFromString(String s) {
         return Float.parseFloat(s);
     }
+
+    /**
+     * Convert Numbers to Strings
+     */
+    public String numberToString(Number number) {
+        if (number instanceof Integer v) {
+            return "" + v;
+        }
+        if (number instanceof Float v) {
+            return Float.toString(v);
+        }
+
+        // Java implicitly calls toString() method
+        return String.valueOf(number);
+    }
 }

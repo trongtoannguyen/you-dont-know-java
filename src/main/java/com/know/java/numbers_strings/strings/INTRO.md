@@ -107,3 +107,29 @@ float v = a.floatValue();
 ```
 
 The first approach is supposed faster, since it doesn't involve creating an object.
+
+## Converting Numbers to Strings
+
+Sometimes you need to perform an action on the string form of a number, there are several ways to convert number to
+string
+in Java:
+
+```java
+int v;
+
+// concatenate with an empty string, conversion is handled for you
+String vString = "" + v;
+```
+
+Each `Number` subclasses provide a `toString` method to achieve similar purpose:
+
+```java
+String vString = Integer.toString(v);
+```
+
+or simply:
+
+```java
+String vString = String.valueOf(v);
+```
+In the last approach, the JVM internally calls the `toString()` method of the corresponding wrapper class.

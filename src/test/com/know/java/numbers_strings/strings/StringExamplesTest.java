@@ -81,4 +81,23 @@ class StringExamplesTest {
         // assert a Float object
         assertInstanceOf(Float.class, Float.valueOf(numString));
     }
+
+    @Test
+    void numberToString() {
+        int v = 34;
+        float f = 35f;
+        double d = 68.3;
+
+        String result = sut.numberToString(v);
+        assertInstanceOf(String.class, result);
+        assertEquals("34", result);
+
+        result = sut.numberToString(f);
+        assertInstanceOf(String.class, result);
+        assertEquals("35.0", result);
+
+        result = sut.numberToString(d);
+        assertInstanceOf(String.class, result);
+        assertEquals("68.3", result);
+    }
 }
