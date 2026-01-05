@@ -8,6 +8,7 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class StringExamplesTest {
 
@@ -150,5 +151,15 @@ class StringExamplesTest {
         String s = "Java Developer";
         String result = s.toUpperCase();
         assertEquals("JAVA DEVELOPER", result);
+    }
+
+    /**
+     * Searching for Characters and Substrings in a String
+     */
+    @Test
+    void findingIndexTest() {
+        String s = "Java Developer";
+        assertEquals(1, s.indexOf('a'));
+        assertEquals(s.length() - 1, s.lastIndexOf('r'));
     }
 }
