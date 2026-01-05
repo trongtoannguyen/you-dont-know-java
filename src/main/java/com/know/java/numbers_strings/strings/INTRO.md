@@ -151,3 +151,15 @@ char aChar = aString.charAt(4);
 
 There are two versions of `substring` method to get more than one consecutive character from a string
 `substring(int beginIndex)` and `substring(int beginIndex, int endIndex)`
+
+## Other Methods for Manipulating Strings
+
+Here are several other String methods for manipulating strings:
+
+- `String[] split(String regex)` and `String[] split(String regex, int limit)`: search for a given regular expression
+  and split the string into an array of substrings, this section is covered in later chapter.
+- `CharSequence subSequence(int beginIndex, int endIndex)`: return a new character sequence constructed from
+  _beginIndex_ index up until _endIndex_ – _1_.
+- `String trim()`: Return a copy of the string, with leading and trailing whitespace omitted.
+- `String toLowerCase()` and `String toUpperCase()`: return a new string that is the original string converted to lower
+  case or upper case.

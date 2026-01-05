@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 
@@ -119,5 +121,34 @@ class StringExamplesTest {
         int dotIndex = aPalindrome.indexOf(".");
         result = sut.subStringFromToIndex(aPalindrome, 0, dotIndex);
         assertEquals("Niagara", result);
+    }
+
+    @Test
+    void searchRegularExpression() {
+        String myStr = "This i4s a1 mix di1g7t, and n3on dig4it 9sequences";
+        String regex = "[\\s\\d,.]+";
+        String[] myArray = myStr.split(regex);
+        System.out.println(Arrays.toString(myArray));
+    }
+
+    @Test
+    void subSequenceTest() {
+        CharSequence s = new StringBuilder("Java Developer");
+        CharSequence charSequence = s.subSequence(5, 12);
+        assertEquals("Develop", charSequence);
+    }
+
+    @Test
+    void trimFromStringTest() {
+        String s = "   Java Developer   ";
+        String result = s.trim();
+        assertEquals("Java Developer", result);
+    }
+
+    @Test
+    void upperCaseStringTest() {
+        String s = "Java Developer";
+        String result = s.toUpperCase();
+        assertEquals("JAVA DEVELOPER", result);
     }
 }
