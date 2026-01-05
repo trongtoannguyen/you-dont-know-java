@@ -163,3 +163,8 @@ Here are several other String methods for manipulating strings:
 - `String trim()`: Return a copy of the string, with leading and trailing whitespace omitted.
 - `String toLowerCase()` and `String toUpperCase()`: return a new string that is the original string converted to lower
   case or upper case.
+
+## Searching for Characters and Substrings in a String
+
+- `indexOf()`, `lastIndexOf()`: return the position of a character or substring within a string.
+- `boolean contains(CharSequence s)`: return true if the string contains the specified sequence of char values.
